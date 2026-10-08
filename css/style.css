@@ -685,7 +685,7 @@ header {
 .lesson-list li {
     padding: 7px 0 7px 26px;
     position: relative;
-    border-bottom: 1.5px dashed rgba(65, 15, 0, .25);
+    border-bottom: 1.5px dashed rgba(65, 15, 0);
 }
 
 .lesson-list li:before {
@@ -700,10 +700,24 @@ header {
 /* ---------- NOT-A-COURSE contrast ---------- */
 .contrast {
     background: var(--cream);
-    padding: 110px 0;
+    padding: 32px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.video video {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border: 3px solid var(--ink);
+    border-radius: 20px;
 }
 
 .contrast-grid {
+    padding-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -718,10 +732,11 @@ header {
 
 .contrast-card.a {
     background: var(--pink);
+    height: fit-content;
 }
 
 .contrast-card.b {
-    background: var(--white);
+    background: #f6f3e4;
 }
 
 .contrast-card h3 {
@@ -741,8 +756,14 @@ header {
     margin-bottom: 0;
 }
 
-.contrast-card strong {
+.contrast-card.a strong {
     background: var(--cream);
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.contrast-card.b strong {
+    background: var(--pink);
     padding: 0 4px;
     border-radius: 4px;
 }
@@ -816,20 +837,64 @@ header {
     padding: 110px 0;
 }
 
+.wrap.instructor-grid {
+    max-width: 80%;
+    max-height: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .instructor-grid {
     display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    gap: 56px;
-    align-items: center;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+
+}
+
+.id-avatar-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.id-avatar {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius-sm);
+    border: 3px solid var(--ink);
+    overflow: hidden;
+}
+
+.id-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+
+.instagram {
+    position: absolute;
+    right: -55px;
+    bottom: -35px;
+    transform: rotate(-8deg);
+    z-index: 2;
+}
+
+.instagram svg {
+    width: clamp(70px, 10vw, 140px);
+    height: auto;
+    display: block;
 }
 
 .id-card {
+    width: 90%;
     background: var(--cream);
     border: 3px solid var(--ink);
     border-radius: var(--radius);
     padding: 32px;
     box-shadow: var(--shadow-lg);
-    transform: rotate(-2deg);
+    position: relative;
+    align-self: start;
 }
 
 .id-avatar {
@@ -914,8 +979,9 @@ header {
 
 .get-item {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
-    align-items: flex-start;
     background: var(--cream-soft);
     border: 2.5px solid var(--ink);
     border-radius: var(--radius-sm);
@@ -926,7 +992,6 @@ header {
     font-family: 'Anton', sans-serif;
     font-size: 26px;
     color: var(--pink);
-    -webkit-text-stroke: 1.5px var(--ink);
     flex: none;
 }
 
@@ -1180,10 +1245,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .wrap {
-        padding: 0 20px;
-    }
-
     .get-grid {
         grid-template-columns: 1fr;
     }
