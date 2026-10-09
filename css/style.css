@@ -154,7 +154,7 @@ h3 {
 }
 
 .btn-light {
-    background: var(--cream);
+    background: var(--pink);
     color: var(--ink);
     box-shadow: 5px 5px 0 rgba(65, 15, 0, .55);
 }
@@ -260,7 +260,7 @@ header {
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.0fr 1.0fr;
     gap: 50px;
     align-items: center;
 }
@@ -310,7 +310,7 @@ header {
 }
 
 .hero-art .badge-main {
-    width: 78%;
+    width: 65%;
     margin: 0 auto;
     transform: rotate(4deg);
     filter: drop-shadow(10px 12px 0 rgba(65, 15, 0, .18));
@@ -471,10 +471,7 @@ header {
     padding: 110px 0 90px;
 }
 
-#oq_thebrand {
-    font-family: "Blur-Sight";
-    font-size: clamp(40px, 6vw, 50px);
-}
+
 
 .about-grid {
     display: grid;
@@ -839,7 +836,6 @@ header {
 
 .wrap.instructor-grid {
     max-width: 80%;
-    max-height: 1200px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -874,14 +870,14 @@ header {
 
 .instagram {
     position: absolute;
-    right: -55px;
+    right: -90px;
     bottom: -35px;
     transform: rotate(-8deg);
     z-index: 2;
 }
 
 .instagram svg {
-    width: clamp(70px, 10vw, 140px);
+    width: clamp(70px, 9vw, 140px);
     height: auto;
     display: block;
 }
@@ -1116,12 +1112,13 @@ details p {
 
 /* ---------- FINAL CTA ---------- */
 .final-cta {
-    background: var(--ink);
-    color: var(--cream);
+    background: var(--cream);
+    color: var(--inc);
     padding: 120px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
+
 }
 
 .final-cta .display {
@@ -1129,18 +1126,33 @@ details p {
     margin-bottom: 10px;
 }
 
+.logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(400px, 30vw, 900px);
+}
+
+
+.wrap.final {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
 .final-cta .lines span {
     display: block;
 }
 
-.final-cta .logo-final {
-    width: 220px;
-    margin: 34px auto 40px;
+.display.lines {
+    font-size: clamp(90px, 6vw, 160px) !important;
 }
 
 .final-cta .squiggle-pink {
     position: absolute;
-    width: 170px;
+    width: clamp(120px, 20vw, 800px);
     opacity: .9;
 }
 
@@ -1238,10 +1250,7 @@ footer {
         display: flex;
     }
 
-    .hero-art {
-        min-height: 340px;
-        margin-top: 20px;
-    }
+    
 }
 
 @media (max-width: 600px) {
