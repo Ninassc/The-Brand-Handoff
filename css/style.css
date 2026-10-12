@@ -1187,7 +1187,7 @@ details p {
 }
 
 .display.lines {
-    font-size: clamp(80px, 6vw, 160px) !important;
+    font-size: clamp(50px, 8vw, 160px) !important;
 }
 
 .final-cta .squiggle-pink {
@@ -1247,6 +1247,10 @@ footer {
     gap: 10px;
 }
 
+.br-mobile {
+    display: none;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 980px) {
 
@@ -1302,19 +1306,21 @@ footer {
         grid-template-columns: 1fr;
     }
 
+
     .problem-grid {
         gap: 10px;
     }
 
     .instructor-grid {
         row-gap: 40px;
+        justify-items: center;
+        text-align: center;
     }
 
     .about-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        text-align: center;
     }
 
     .about-card p {
@@ -1377,6 +1383,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+    .br-mobile {
+        display: inline;
+    }
+
     .get-grid {
         grid-template-columns: 1fr;
     }
